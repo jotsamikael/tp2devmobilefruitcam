@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color={{this.colour}}>
+    <ion-buttons slot="start">
+
+      <ion-menu-toggle> 
+        <ion-button>
+          <ion-icon name="menu"></ion-icon>
+        </ion-button>
+        </ion-menu-toggle>
+
+    </ion-buttons>
+    <ion-title>
+      FRUITCAM
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let article of Articles | fruitfilter:this.colour ">
+      <ion-img style="width: 150px;" src='{{article.pictures[0]}}'> </ion-img> 
+    </ion-slide>
+  
+  </ion-slides>
+  <div style="text-align: center;">
+    <h3 style="font-weight: 800; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" > List de fruit de couleur {{this.colour}}</h3>
+  </div>
+  
+<ion-list (click)="showDetails(article)" *ngFor="let article of Articles | fruitfilter:this.colour ">
+    <ion-item >
+         <ion-thumbnail slot="end" style="width: 90px; padding-right: 2%;">
+             <ion-img style="padding: 3%;" class="element" src="{{article.pictures[1]}}"></ion-img>
+         </ion-thumbnail>
+
+         <div style="width: 120px;">
+         <h5 slot="start" style="font-weight: 600;">{{article.name}}</h5><br>
+         <ion-chip>{{article.price}} FCFA</ion-chip>
+        </div>
+    </ion-item>
+</ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+      <ion-col offset-1 col-10>
+        <ion-button ion-button  size="default" expand="full">Made with 
+          <ion-icon name="heart"></ion-icon>Jotsa Mikael
+        </ion-button>
+      </ion-col>
+  </ion-row>
+</ion-footer>

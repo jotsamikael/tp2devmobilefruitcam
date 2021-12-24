@@ -1,0 +1,61 @@
+<ion-header >
+  <ion-toolbar color={{this.data.catergory}}>
+    <ion-buttons slot="start" >
+       <ion-back-button></ion-back-button>
+    <ion-title>{{this.data.name}}</ion-title>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+
+  <ion-card>
+
+    <ion-slides pager autoplay="500" loop="true">
+          <ion-slide  *ngFor="let picture of this.data.pictures" >
+           <ion-img style="width:70%; margin: auto;" [src]="picture"></ion-img>
+          </ion-slide>
+             
+    </ion-slides>
+    <ion-card-content>
+          <ion-card-title>
+              <ion-chip color="primary">
+                    <ion-label>
+                      Prix: {{this.data.price}}
+                    </ion-label>
+              </ion-chip>
+              <ion-chip color="success">
+                <ion-label >
+                   En stocke: {{this.data.quantity}}
+                </ion-label>
+              </ion-chip>
+             
+              <ion-chip>
+                <ion-label color="secondary">
+                  {{this.data.availability.type}}
+                </ion-label>
+              </ion-chip>
+          </ion-card-title>
+          <p>Prix: {{this.data.price}}</p>
+          <p>{{this.data.info}}</p>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer style="background-color: white;">
+  <ion-row>
+
+    <ion-col offset-1 col-10>
+      <ion-button (click)="choose(this.data)" ion-button shape="round" size="large" expand="block" color={{this.data.catergory}} >
+        <ion-icon name="chevron-up-circle-outline"></ion-icon>&nbsp; Action
+      </ion-button>
+    </ion-col>
+      <ion-col offset-1 col-10>
+        <ion-button ion-button shape="round" size="large" expand="block" color={{this.data.catergory}}>
+          <ion-icon name="cart"></ion-icon>&nbsp; Add to Cart
+        </ion-button>
+      </ion-col>
+     
+  </ion-row>
+</ion-footer>

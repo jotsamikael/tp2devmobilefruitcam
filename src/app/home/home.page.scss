@@ -1,3 +1,4 @@
+
 #container {
   text-align: center;
 
@@ -24,4 +25,25 @@
 
 #container a {
   text-decoration: none;
+}
+
+ion-card-content{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+
+
+.sign-in{
+  position: relative;
+  left: 28vh;
+  font-weight: 700;
+}
+
+ion-slides{
+  height: 45vh;
+}
+
+.element{
+  margin: -10%;
 }

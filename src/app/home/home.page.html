@@ -1,20 +1,59 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+
+      <ion-menu-toggle> 
+        <ion-button>
+          <ion-icon name="menu"></ion-icon>
+        </ion-button>
+        </ion-menu-toggle>
+
+    </ion-buttons>
     <ion-title>
-      Blank
+      FRUITCAM
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <ion-img src= 'assets/imgs/product7/avo1.jpg'> </ion-img> 
+    </ion-slide>
+    <ion-slide>
+      <ion-img src='assets/imgs/product1/straw3.jpg'> </ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img src='assets/imgs/product3/pine2.jpg'></ion-img>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    </ion-slide>
+   
+  </ion-slides>
+  <div style="text-align: center;">
+    <h3 style="font-weight: 800; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">List de fruits</h3>
   </div>
+<ion-list size="large" expand="full" color=white (click)="showDetails(article)" *ngFor="let article of Articles">
+    <ion-item >
+      
+         <ion-thumbnail slot="end" style="width: 90px;" >
+             <ion-img style="padding: 5%;" class="element" src="{{article.pictures[1]}}"> </ion-img>
+         </ion-thumbnail>
+        <div style="width: 120px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+          <h5 slot="start" style="font-weight: 600;">{{article.name}}</h5><br>
+          <ion-chip>{{article.price}} FCFA</ion-chip>
+        </div>
+              
+    
+    </ion-item>
+</ion-list>
 </ion-content>
+
+<ion-footer color="primary" style="margin: 0; padding: 0;">
+  <ion-row>
+      <ion-col offset-1 col-10>
+        <ion-button ion-button  size="default" expand="full">Made with 
+          <ion-icon name="heart"></ion-icon>Jotsa Mikael
+        </ion-button>
+      </ion-col>
+  </ion-row>
+</ion-footer>

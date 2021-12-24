@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button></ion-back-button>
+    <ion-title>favoris</ion-title>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="text-align: center;">
+    <h3 style="font-weight: 700;">{{this.item.name}}</h3>
+  </div>
+  
+<ion-list>
+    <ion-item >
+         <ion-thumbnail slot="end" style="width: 90px; padding-right: 2%;">
+             <ion-img style="padding: 3%;" class="element" src="{{this.item.pictures[0]}}"></ion-img>
+         </ion-thumbnail>
+
+         <div style="width: 120px;">
+         <h5 slot="start" style="font-weight: 700;"></h5><br>
+         <ion-chip> {{this.item.price}} FCFA</ion-chip>
+        </div>
+    </ion-item>
+</ion-list>
+
+
+</ion-content>
+
+<ion-footer style="background-color: white;">
+  <ion-row>
+      <ion-col offset-1 col-10>
+        <ion-button ion-button  size="default" expand="full">Made with 
+          <ion-icon name="heart"></ion-icon>Jotsa Mikael
+        </ion-button>
+      </ion-col>
+  </ion-row>
+</ion-footer>
