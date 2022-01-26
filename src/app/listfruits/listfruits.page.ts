@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController, NavParams } from '@ionic/angular';
 import { Article } from 'src/models/article';
+import { FruitService } from '../providers/fruit.service';
 import { ArticlesService } from '../service/articles.service';
 
 @Component({
@@ -20,10 +21,13 @@ export class ListfruitsPage implements OnInit {
     speed: 400
   };
 
-  constructor(private route: ActivatedRoute,  public navCtrl: NavController,private router: Router, private articleservice: ArticlesService) { 
+  data: any;
+  dataList: any;
+
+  constructor(private fruitService: FruitService,private route: ActivatedRoute,  public navCtrl: NavController,private router: Router, private articleservice: ArticlesService) { 
     this.colour =  this.route.snapshot.paramMap.get('colour')
 
-    this.Articles = [
+    /*this.Articles = [
       {name: 'Dragon fruit', 
       price:100,
       createdAt: new Date(),
@@ -274,12 +278,21 @@ export class ListfruitsPage implements OnInit {
         catergory:'success',
       }
       
-    ]
+    ] */
   }
+
 
   ngOnInit() {
-  }
 
+    
+    this.fruitService.getFruit().subscribe((response: any)=>{
+      console.log(response);
+      this.dataList = response;
+    });
+  
+}
+
+ 
 
 
   showDetails(article : Article){

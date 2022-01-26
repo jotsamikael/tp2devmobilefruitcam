@@ -30,7 +30,7 @@ const routes: Routes = [
     loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
   },
   {
-    path: 'details/:id',
+    path: 'details/:idAlbum',
     resolve: {
       special: ResolverService
     },
@@ -47,6 +47,14 @@ const routes: Routes = [
   {
     path: 'favoris',
     loadChildren: () => import('./favoris/favoris.module').then( m => m.FavorisPageModule)
+  },
+  {
+    path: 'song',
+    loadChildren: () => import('./song/song.module').then( m => m.SongPageModule)
+  },
+  {
+    path: 'song/:idSong',
+    loadChildren: () => import('./song/song.module').then( m => m.SongPageModule)
   }
 
   

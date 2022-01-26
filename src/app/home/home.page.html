@@ -1,54 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-
       <ion-menu-toggle> 
         <ion-button>
           <ion-icon name="menu"></ion-icon>
         </ion-button>
-        </ion-menu-toggle>
-
-    </ion-buttons>
-    <ion-title>
-      FRUITCAM
-    </ion-title>
+        </ion-menu-toggle>  
+    </ion-buttons> 
+    <ion-searchbar color="light" shape="round" placeholder="Rechercher…"  (ionInput)="searchItems($event)" ></ion-searchbar>
   </ion-toolbar>
+  <ion-title color="primary">
+    Music world
+  </ion-title>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
+
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide>
-      <ion-img src= 'assets/imgs/product7/avo1.jpg'> </ion-img> 
+      <ion-img src='assets/imgs/motionless.jpg'> </ion-img>
     </ion-slide>
     <ion-slide>
-      <ion-img src='assets/imgs/product1/straw3.jpg'> </ion-img>
+      <ion-img src= 'assets/imgs/thisworldfair.jpg'> </ion-img> 
     </ion-slide>
     <ion-slide>
-      <ion-img src='assets/imgs/product3/pine2.jpg'></ion-img>
+      <ion-img src='assets/imgs/vald.jpg'></ion-img>
 
     </ion-slide>
    
   </ion-slides>
   <div style="text-align: center;">
-    <h3 style="font-weight: 800; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">List de fruits</h3>
+    <h3>Mes Albums</h3>
+    <ion-spinner name="lines" *ngIf="show"></ion-spinner>
   </div>
-<ion-list size="large" expand="full" color=white (click)="showDetails(article)" *ngFor="let article of Articles">
-    <ion-item >
-      
-         <ion-thumbnail slot="end" style="width: 90px;" >
-             <ion-img style="padding: 5%;" class="element" src="{{article.pictures[1]}}"> </ion-img>
+<ion-list size="large" expand="full" color=white (click)="showDetails(article)" *ngFor="let article of resultats">
+    <ion-item>
+         <ion-thumbnail slot="end" class="thumb">
+             <ion-img class="image" class="element"src="{{article.image[0]}}"></ion-img>
          </ion-thumbnail>
-        <div style="width: 120px; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-          <h5 slot="start" style="font-weight: 600;">{{article.name}}</h5><br>
-          <ion-chip>{{article.price}} FCFA</ion-chip>
+        <div  class="box1">
+          <p slot="start" class="title">{{article.title}}</p><br>
+          <ion-chip>{{article.author}}</ion-chip>
         </div>
-              
-    
     </ion-item>
 </ion-list>
 </ion-content>
 
-<ion-footer color="primary" style="margin: 0; padding: 0;">
+<!--<ion-footer color="primary" style="margin: 0; padding: 0;">
   <ion-row>
       <ion-col offset-1 col-10>
         <ion-button ion-button  size="default" expand="full">Made with 
@@ -56,4 +55,4 @@
         </ion-button>
       </ion-col>
   </ion-row>
-</ion-footer>
+</ion-footer>-->

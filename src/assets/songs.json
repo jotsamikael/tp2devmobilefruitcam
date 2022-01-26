@@ -1,0 +1,64 @@
+[ {
+    "idSong": "0",
+    "title": "Abigail",
+    "idAlbum": "1",
+    "author": "Motionless in white",
+    "link": "songs/Abigail.mp3"
+},
+{
+    "idSong": "1",
+    "title": "Dont Make Me Wait",
+    "idAlbum": "2",
+    "author": "this world fair",
+    "link": "songs/Dont Make Me Wait.mp3"
+
+},
+{
+    "idSong": "2",
+    "title": "offshore",
+    "idAlbum": "3",
+    "author": "Vald",
+    "link": "songs/offshore.mp3"
+
+},
+{
+    "idSong": "3",
+    "title": "No someone",
+    "idAlbum": "2",
+    "author": "this world fair",
+    "link": "songs/Dont Make Me Wait.mp3"
+
+},
+{
+    "idSong": "4",
+    "title": "si j'arretais",
+    "idAlbum": "3",
+    "author": "Vald",
+    "link": "songs/Sijarretais.mp3"
+
+},
+{
+    "idSong": "5",
+    "title": "Another life",
+    "idAlbum": "1",
+    "author": "Motionless in white",
+    "link": "songs/AnotherLife.mp3"
+
+},
+{
+    "idSong": "6",
+    "title": "Gotaga",
+    "idAlbum": "3",
+    "author": "Vald",
+    "link": "songs/gotaga.mp3"
+
+},
+{
+    "idSong": "7",
+    "title": "Echelon 2",
+    "idAlbum": "3",
+    "author": "Vald",
+    "link": "songs/Echelon2.mp3"
+
+}
+]

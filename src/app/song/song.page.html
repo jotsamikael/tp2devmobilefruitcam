@@ -1,0 +1,44 @@
+<ion-header >
+  <ion-toolbar color=primary>
+    <ion-buttons slot="start" >
+       <ion-back-button></ion-back-button>
+    <ion-title></ion-title>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card>
+  <ion-card-content *ngFor="let song of resultats | song:idSong">
+    <div class="middle">
+      <ion-icon color="primary" name="musical-note" class="big"></ion-icon>
+      <ion-card-header>
+        <ion-card-subtitle>{{song.title}}</ion-card-subtitle>
+        <ion-chip class="chip">{{song.author}}</ion-chip>
+
+
+      </ion-card-header>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+
+</ion-content>
+
+<ion-footer color="primary">
+    <ion-button ion-button  size="large" expand="full">
+      <ion-row>
+        <ion-col offset-1 col-2>
+          <ion-icon name=volume-low class="vol"></ion-icon>
+        </ion-col>  <ion-col offset-1 col-6>
+          <ion-icon name="pause-circle" class="play"></ion-icon>
+        </ion-col>
+        <ion-col offset-1 col-2>
+          <ion-icon name=volume-medium class="vol"></ion-icon>
+    </ion-col>
+  </ion-row>
+    </ion-button>
+</ion-footer>

@@ -1,0 +1,96 @@
+[
+    {"name": "Dragon fruit", 
+    "price":100,
+    "createdAt": "new Date()",
+    "id":1,
+    "quantity":4,
+    "pictures":[
+     " assets/imgs/product4/dragon1.jpg",
+      "assets/imgs/product4/dragon2.jpg",
+      "assets/imgs/product4/dragon3.jpg"
+    ],
+    "availability":{
+      "available":true,
+      "type":"delivery",
+      "fee":1000
+    },
+     "info":"dragon fruit, do not be afraid its does not burn", 
+     "catergory":"danger"
+    },
+
+    {"name": "Banana", 
+    "price":100,
+    "createdAt": "new Date()",
+    "id":2,
+    "quantity":54,
+    "pictures":[
+      "assets/imgs/product2/banana1.jpg",
+     "assets/imgs/product2/banana2.jpg",
+      "assets/imgs/product2/banana3.jpg"
+    ],
+    "availability":{
+      "available":true,
+      "type":"delivery",
+      "fee":1000
+    },
+     "info":"sweet yellowish bananas miam miam", 
+     "catergory":"warning"
+    },
+
+    {"name": "Pear", 
+     " price":500,
+     "createdAt": "new Date()",
+      "id":6,
+      "quantity":14,
+     " pictures":[
+        "assets/imgs/product8/pear1.jpg",
+        "assets/imgs/product8/pear2.jpg"
+        
+      ],
+      "availability":{
+       "available":true,
+       "type":"delivery",
+        "fee":1000
+      },
+       "info":"watery riped pears", 
+       "catergory":"success"
+      },
+
+      {"name": "Blueberries", 
+      "price":75,
+      "createdAt": "new Date()",
+      "id":14,
+      "quantity":14,
+      "pictures":[
+       " assets/imgs/product14/blueberry1.jpg",
+        "assets/imgs/product14/blueberry2.jpg"
+      ],
+      "availability":{
+        "available":true,
+        "type":"delivery",
+        "fee":1000
+      }
+
+      },
+
+      {"name": "Orange", 
+        "price":100,
+        "createdAt": "new Date()",
+        "id":1,
+        "quantity":14,
+        "pictures":[
+         "assets/imgs/product6/orange2.jpg",
+          "assets/imgs/product6/orange2.jpg",
+          "assets/imgs/product6/orange3.jpg"
+        ],
+        "availability":{
+          "available":true,
+          "type":"delivery",
+          "fee":1000
+        },
+         "info":"succulent oranges", 
+         "catergory":"warning"
+        }
+      
+    
+]

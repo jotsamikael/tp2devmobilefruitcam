@@ -1,0 +1,27 @@
+[ 
+{
+    "idAlbum": "2",
+    "title": "Gone",
+    "author": "this world fair",
+    "image": ["assets/imgs/thisworldfair.jpg",
+        "assets/imgs/thisworldfair1.jpg"
+    ]
+    
+},
+{
+    "idAlbum": "1",
+    "title": "Creatures",
+    "author": "Motionless in white",
+    "image": ["assets/imgs/motionless.jpg",
+        "assets/imgs/motionless1.jpg"]
+},
+{
+    "idAlbum": "3",
+    "title": "journal perso 2",
+    "author": "Vald",
+    "image": ["assets/imgs/vald.jpg",
+        "assets/imgs/vald2.jpg"
+    ]
+    
+}
+]
